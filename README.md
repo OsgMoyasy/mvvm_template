@@ -1,17 +1,10 @@
 # flutter_mvvm_template
 
-flutter mvvm template
+## 概要
+学校の後輩のためにflutterをMVVMアーキテクチャで開発するためのテンプレートを作成する。
+- 私自身が学習を開始して日が浅いため間違った考え方をしている可能性は存分にあります。
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
-"# mvvm_template" 
+## 目標・方針
+後輩が効率的にflutterを用いた開発を行えるようにする。
+- そのため作業をどのように行うのかはissueかwikiに記述する
+- 現在はissueに書いているが余裕があればwikiに記述する
