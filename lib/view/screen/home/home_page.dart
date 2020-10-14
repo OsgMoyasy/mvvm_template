@@ -1,7 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_mvvm_template/view/screen/counter/counter_page.dart';
-import 'package:flutter_mvvm_template/view/screen/input_form/input_form_page.dart';
+import 'package:flutter_mvvm_template/view/screen/input_form/form_page.dart';
 
 class HomePage extends StatelessWidget {
   @override
