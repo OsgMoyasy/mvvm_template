@@ -1,14 +1,9 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_mvvm_template/view_model/form_page_view_model.dart';
+import 'package:provider/provider.dart';
 
-class MyInputForm extends StatefulWidget {
-  @override
-  _MyInputFormState createState() => _MyInputFormState();
-}
-
-class _MyInputFormState extends State<MyInputForm> {
-  final formController = TextEditingController();
-
+class MyInputForm extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,9 +11,14 @@ class _MyInputFormState extends State<MyInputForm> {
       child: Column(
         mainAxisSize: MainAxisSize.min,
         children: [
-          Text(formController.text),
+          Selector<FormPageViewModel, String>(
+            selector: (context, viewModel) => viewModel.outputString,
+            builder: (context, outputString, child) {
+              return Text(outputString);
+            },
+          ),
           TextField(
-            controller: formController,
+            controller: context.watch<FormPageViewModel>().formController,
             decoration: InputDecoration(
               hintText: '何か入力して確定ボタンを押してください',
             ),
@@ -26,7 +26,7 @@ class _MyInputFormState extends State<MyInputForm> {
           RaisedButton(
             child: Text('確定'),
             onPressed: () {
-              setState(() {});
+              context.read<FormPageViewModel>().onPressSetStringButton();
             },
           ),
         ],
